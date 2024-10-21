@@ -52,7 +52,7 @@ const Quiz = () => {
         return null
       })
     }else{
-      toast.error("You can go next by attending this queation first")
+      toast.error("You can go next by attending this question first")
     }
   }
 
