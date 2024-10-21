@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import './Quiz.css'
 import {data} from "../../assets/data.js"
+import { toast } from 'react-toastify'
 
 const Quiz = () => {
   let randomNumber =()=> Math.floor(Math.random() * (data.length - 0 + 1)) + 0;
@@ -50,6 +51,8 @@ const Quiz = () => {
         option.current.classList.remove("correct")
         return null
       })
+    }else{
+      toast.error("You can go next by attending this queation first")
     }
   }
 
